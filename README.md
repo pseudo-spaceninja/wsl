@@ -1,2 +1,2 @@
-# wsl
-relating to windows subsystem for linux
+# WSL
+Stuff relating to windows subsystem for linux
