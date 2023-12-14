@@ -1,4 +1,4 @@
-# Nameservers
+# Fix mismatch betwen WSL nameservers and those of the host system
 
 ## What is it good for?
 
@@ -18,7 +18,7 @@ This script is written in bash, and uses built-in functionality. A compatible sh
 
 Disclaimer: This is written for a system with systemd and bash. It may not be current, and it may not reflect your system.
 
-Exercise caution when using _random_ scripts. Make sure you understand what the script does before you run it. 
+Exercise caution when using _random_ scripts. Make sure you understand what the script does before you run it.  
  ***Especially*** when the script requires superuser privileges - **like _this_ script**.
 
 Make sure your /etc/wsl.conf includes the following lines:
