@@ -57,11 +57,11 @@ fi
 # The location of the powershell executable according to WSL.
 ps=/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe
 echo ""
-read -st 30 -p "About to check wsl interface and write to resolv.conf. Continue..(y/n)? " cont
+read -t 30 -p "About to check wsl interface and write to resolv.conf. Continue..(y/n)? " cont
 echo ""
 if [[ "$cont" == [yY] || "$cont" == [yY][eE] || "$cont" == [yY][eE][sS] ]]; then
 	if [[ -e $ps ]]; then
-        	echo -e "Running powershell command to get current dns servers and writing those to resolv.conf.\n This usually takes a few seconds...\n"
+        	echo -e "Running powershell command to get current dns servers and writing those to resolv.conf.\n""This usually takes a few seconds...\n"
 	else
  		echo "Unable to find host system powershell executable. Exiting.."
    		exit 4 # No powershell executable found 
@@ -70,8 +70,6 @@ else
         echo "Exiting.."
   exit 10; # Stopped by user
 fi
-# Write next step in process to stdout.
-echo "Running powershell command to get current dns servers. This usually takes a few seconds."
 
 # Host PCs powershell, extract DNS addresses from interface connected to WSL
 ${ps} -Command '$ErrorActionPreference="Continue"` 
